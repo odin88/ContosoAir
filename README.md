@@ -1,4 +1,4 @@
-
+[![Build Status](https://dev.azure.com/a-haabub/LabEsok/_apis/build/status/odin88.ContosoAir?branchName=master)](https://dev.azure.com/a-haabub/LabEsok/_build/latest?definitionId=5&branchName=master)
 
 
 # Microsoft.Github CI Demo
