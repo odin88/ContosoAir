@@ -4,16 +4,11 @@ trigger:
   - master
 steps:
   - task: Npm@1
+    displayName: 'npm custom'
     inputs:
-      command: install
-  - script: 'npm test'
-    displayName: 'Run unit tests'
-    continueOnError: true
-  - task: PublishTestResults@2
-    displayName: 'Publish Test Results'
-    condition: succeededOrFailed()
-    inputs:
-      testResultsFiles: $(System.DefaultWorkingDirectory)/test-report.xml
+    command: custom
+    verbose: false
+    customCommand: 'install --production'
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish Code Coverage'
     condition: 'in(variables[''Agent.JobStatus''], ''Succeeded'')'
