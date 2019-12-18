@@ -6,9 +6,9 @@ steps:
   - task: Npm@1
     displayName: 'npm custom'
     inputs:
-    command: custom
-    verbose: false
-    customCommand: 'install --production'
+      command: custom
+      verbose: false
+      customCommand: 'install --production'
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish Code Coverage'
     condition: 'in(variables[''Agent.JobStatus''], ''Succeeded'')'
